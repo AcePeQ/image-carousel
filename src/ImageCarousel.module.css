@@ -1,0 +1,98 @@
+.imageBox {
+  display: flex;
+
+  position: relative;
+
+  width: 75rem;
+  height: 50rem;
+
+  border-radius: 3rem;
+
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 3rem;
+
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+
+  transition: all 0.4s;
+}
+
+.btnSlider {
+  all: unset;
+
+  position: absolute;
+  display: block;
+  cursor: pointer;
+
+  z-index: 10;
+
+  top: 0;
+  bottom: 0;
+
+  padding: 0.5rem;
+
+  background-color: transparent;
+
+  transition: all 0.4s;
+}
+
+.btnSlider:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.btnSlider > * {
+  stroke: white;
+  fill: white;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.dots {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  height: 2rem;
+
+  z-index: 10;
+}
+
+.dot {
+  width: 2rem;
+  height: 2rem;
+
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.4s;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.8);
+}
